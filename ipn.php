@@ -18,10 +18,10 @@ $transactionStatus = $_POST['status'];
 $transactionMd5sig = $_POST['md5sig'];
 $txn_id = $_POST['transaction_id'];
 
-// Original details submitted using the form sent back by the Skrill server
+// Original details submitted using the form sent back by the Skrill server that you may use for your database updation
 $amount = $_POST['amount'];
 $currency_code = $_POST['currency'];
-$userId = $_POST['Field1'];
+
 
 // Concatenate for calculating hash
 $md5signature = $transactionMerchantId . $txn_id . SKRILL_SECRET_WORD . $transactionMbAmount . $transactionMbCurrency . $transactionStatus;
